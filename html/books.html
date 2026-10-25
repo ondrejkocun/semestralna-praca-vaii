@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dostupné knihy – BookShare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====== HEADER (prihlásený používateľ) ====== -->
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                BookShare
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="books.html" class="nav-link active">Knihy</a></li>
+                    <li><a href="#" class="nav-link">Moje knihy</a></li>
+                    <li><a href="#" class="nav-link">Výpožičky</a></li>
+                    <li><a href="#" class="nav-link">Autori</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.88rem;">Jana Nováková</span>
+                    <a href="#" class="btn btn-primary btn-sm">+ Pridať knihu</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- ====== PAGE HEADING ====== -->
+<div class="page-heading">
+    <div class="container">
+        <div class="page-heading-inner">
+            <div>
+                <h1>Dostupné knihy</h1>
+                <p>Prehľad všetkých kníh zaregistrovaných v komunite</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ====== FILTER BAR ====== -->
+<div class="filter-bar">
+    <div class="container">
+        <div class="filter-bar-inner">
+            <input type="search" placeholder="Vyhľadávanie: názov, autor, ISBN…">
+            <select>
+                <option value="">Žáner</option>
+                <option>Informatika</option>
+                <option>Beletria</option>
+                <option>Sci-fi a fantasy</option>
+                <option>Ekonómia</option>
+                <option>Matematika</option>
+            </select>
+            <select>
+                <option value="">Dostupnosť</option>
+                <option>Dostupná</option>
+                <option>Požičaná</option>
+            </select>
+            <button class="btn btn-primary">Filtrovať</button>
+            <button class="btn btn-ghost">Reset</button>
+        </div>
+    </div>
+</div>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main class="page-body">
+    <div class="container">
+
+        <p class="section-label">Karty kníh</p>
+
+        <!-- Book grid -->
+        <div class="books-grid">
+
+            <!-- 1. Čistý kód -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-info">💻</div>
+                    <div class="book-meta">
+                        <div class="book-title">Čistý kód</div>
+                        <div class="book-author">Robert C. Martin</div>
+                        <span class="badge badge-available">Dostupná</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-80-251-2285-3 · 2009</div>
+                    <div class="book-detail-row">Vlastník: Jana Nováková · Žáner: Informatika</div>
+                    <div class="book-desc">Príručka agilného softvérového remesla. Mierne opotrebovaná väzba.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <a href="#" class="btn btn-primary btn-sm">Požiadať</a>
+                </div>
+            </article>
+
+            <!-- 2. Design Patterns -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-info">💻</div>
+                    <div class="book-meta">
+                        <div class="book-title">Design Patterns</div>
+                        <div class="book-author">Gamma, Helm, Johnson, Vlissides</div>
+                        <span class="badge badge-borrowed">Požičaná</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-0-201-63361-0 · 1994</div>
+                    <div class="book-detail-row">Vlastník: Jana Nováková · Žáner: Informatika</div>
+                    <div class="book-desc">Klasická kniha o návrhových vzoroch v objektovom programovaní.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <button class="btn btn-ghost btn-sm" disabled style="opacity:0.45;cursor:not-allowed;">Požičaná</button>
+                </div>
+            </article>
+
+            <!-- 3. 1984 -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-fiction">📖</div>
+                    <div class="book-meta">
+                        <div class="book-title">1984</div>
+                        <div class="book-author">George Orwell</div>
+                        <span class="badge badge-available">Dostupná</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-80-8061-791-2 · 2015</div>
+                    <div class="book-detail-row">Vlastník: Peter Horváth · Žáner: Beletria</div>
+                    <div class="book-desc">Dystopický román, slovenský preklad.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <a href="#" class="btn btn-primary btn-sm">Požiadať</a>
+                </div>
+            </article>
+
+            <!-- 4. Hobit -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-scifi">🔮</div>
+                    <div class="book-meta">
+                        <div class="book-title">Hobit</div>
+                        <div class="book-author">J. R. R. Tolkien</div>
+                        <span class="badge badge-pending">Žiadosť čaká</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-80-556-0147-2 · 2012</div>
+                    <div class="book-detail-row">Vlastník: Peter Horváth · Žáner: Sci-fi a fantasy</div>
+                    <div class="book-desc">Ilustrované vydanie, vo veľmi dobrom stave.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <button class="btn btn-ghost btn-sm" disabled style="opacity:0.45;cursor:not-allowed;">Čaká sa</button>
+                </div>
+            </article>
+
+            <!-- 5. Introduction to Algorithms -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-info">💻</div>
+                    <div class="book-meta">
+                        <div class="book-title">Introduction to Algorithms</div>
+                        <div class="book-author">Thomas H. Cormen</div>
+                        <span class="badge badge-available">Dostupná</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-0-262-03384-8 · 2009</div>
+                    <div class="book-detail-row">Vlastník: Peter Horváth · Žáner: Informatika</div>
+                    <div class="book-desc">Tretie vydanie, v angličtine.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <a href="#" class="btn btn-primary btn-sm">Požiadať</a>
+                </div>
+            </article>
+
+            <!-- 6. Myslenie rýchle a pomalé -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-economy">📊</div>
+                    <div class="book-meta">
+                        <div class="book-title">Myslenie rýchle a pomalé</div>
+                        <div class="book-author">Daniel Kahneman</div>
+                        <span class="badge badge-available">Dostupná</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-80-551-3526-0 · 2013</div>
+                    <div class="book-detail-row">Vlastník: Správca · Žáner: Ekonómia</div>
+                    <div class="book-desc">O tom, ako sa rozhodujeme.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <a href="#" class="btn btn-primary btn-sm">Požiadať</a>
+                </div>
+            </article>
+
+            <!-- 7. Spoločenstvo prsteňa -->
+            <article class="book-card">
+                <div class="book-card-top">
+                    <div class="book-cover cover-scifi">🔮</div>
+                    <div class="book-meta">
+                        <div class="book-title">Spoločenstvo prsteňa</div>
+                        <div class="book-author">J. R. R. Tolkien</div>
+                        <span class="badge badge-available">Dostupná</span>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-detail-row">ISBN: 978-80-556-0145-8 · 2012</div>
+                    <div class="book-detail-row">Vlastník: Jana Nováková · Žáner: Sci-fi a fantasy</div>
+                    <div class="book-desc">Prvý diel trilógie Pán prsteňov.</div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn btn-ghost btn-sm">Detail</a>
+                    <a href="#" class="btn btn-primary btn-sm">Požiadať</a>
+                </div>
+            </article>
+
+        </div>
+        <!-- /books-grid -->
+
+        <!-- Panel používateľa + admin info -->
+        <div class="info-panel">
+            <h3>Panel používateľa – moje aktivity</h3>
+            <div class="panel-grid">
+                <div class="panel-row">
+                    <span class="panel-label">Aktívne žiadosti</span>
+                    <span class="panel-value">1 (Hobit – čaká na schválenie)</span>
+                </div>
+                <div class="panel-row">
+                    <span class="panel-label">Aktuálne výpožičky</span>
+                    <span class="panel-value">0</span>
+                </div>
+                <div class="panel-row">
+                    <span class="panel-label">Vrátené knihy celkom</span>
+                    <span class="panel-value">1</span>
+                </div>
+                <div class="panel-row">
+                    <span class="panel-label">Moje knihy v zdieľaní</span>
+                    <span class="panel-value">3</span>
+                </div>
+            </div>
+            <p class="admin-note">
+                <strong>Správca navyše vidí akcie:</strong>
+                upraviť knihu, odstrániť knihu, spravovať autorov a žánre.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <span>📚</span> BookShare
+                </div>
+                <p class="footer-desc">
+                    Komunitná platforma na zdieľanie kníh medzi registrovanými používateľmi.
+                    Požičaj knihu od suseda, objavuj nové tituly a buduj lokálnu čitateľskú komunitu.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigácia</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Domov</a></li>
+                    <li><a href="books.html">Zoznam kníh</a></li>
+                    <li><a href="#">Autori</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Informácie</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Ako to funguje</a></li>
+                    <li><a href="#">Podmienky použitia</a></li>
+                    <li><a href="#">Ochrana súkromia</a></li>
+                    <li><a href="#">Kontaktujte nás</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 BookShare – semestrálna práca VAII
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
