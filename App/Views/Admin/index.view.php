@@ -1,16 +1,19 @@
 <?php
-
-/** @var \Framework\Support\LinkGenerator $link */
 /** @var \Framework\Auth\AppUser $user */
+/** @var \Framework\Support\LinkGenerator $link */
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div>
-                Welcome, <strong><?= $user->getName() ?></strong>!<br><br>
-                This part of the application is accessible only after logging in.
-            </div>
-        </div>
+<div class="page-heading">
+    <div class="container">
+        <h1>Administrácia</h1>
+        <p>Správa kníh, autorov, používateľov a výpožičiek</p>
     </div>
 </div>
+
+<main class="page-body">
+    <div class="container">
+        <div class="placeholder-block">
+            <p>Administrátorský panel – bude doplnený</p>
+        </div>
+    </div>
+</main>

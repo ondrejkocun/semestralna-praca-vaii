@@ -6,12 +6,14 @@
 $view->setLayout('auth');
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5">
-            You have logged out. <br>
-            Again <a href="<?= App\Configuration::LOGIN_URL ?>">log in</a> or return <a
-                    href="<?= $link->url("home.index") ?>">back</a> to the home page?
-        </div>
+<div class="auth-card">
+    <div class="auth-logo">
+        <span>&#128218;</span> BookShare
     </div>
+    <h2 class="auth-title">Odhlásenie</h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:24px;">Boli ste úspešne odhlásení.</p>
+    <a href="<?= htmlspecialchars(App\Configuration::LOGIN_URL) ?>" class="btn btn-primary btn-block">Prihlásiť sa znova</a>
+    <p class="auth-footer">
+        <a href="<?= $link->url('home.index') ?>">&#8592; Domovská stránka</a>
+    </p>
 </div>

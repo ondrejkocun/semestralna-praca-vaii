@@ -7,34 +7,31 @@
 $view->setLayout('auth');
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Username</h5>
-                    <div class="text-center text-danger mb-3">
-                        <?= @$message ?>
-                    </div>
-                    <form class="form-signin" method="post" action="<?= $link->url("login") ?>">
-                        <div class="form-label-group mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input name="username" type="text" id="username" class="form-control" placeholder="Username"
-                                   required autofocus>
-                        </div>
-
-                        <div class="form-label-group mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input name="password" type="password" id="password" class="form-control"
-                                   placeholder="Password" required>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn btn-primary" type="submit" name="submit">Log in
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div class="auth-card">
+    <div class="auth-logo">
+        <span>&#128218;</span> BookShare
     </div>
+    <h2 class="auth-title">Prihlásenie</h2>
+
+    <?php if (!empty($message)) { ?>
+        <p class="auth-error"><?= htmlspecialchars($message) ?></p>
+    <?php } ?>
+
+    <form method="post" action="<?= $link->url('auth.login') ?>">
+        <div class="form-group">
+            <label for="username">Používateľské meno</label>
+            <input type="text" id="username" name="username" class="form-control"
+                   placeholder="Zadajte meno" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="password">Heslo</label>
+            <input type="password" id="password" name="password" class="form-control"
+                   placeholder="Zadajte heslo" required>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary btn-block">Prihlásiť sa</button>
+    </form>
+
+    <p class="auth-footer">
+        <a href="<?= $link->url('home.index') ?>">&#8592; Späť na domovskú stránku</a>
+    </p>
 </div>

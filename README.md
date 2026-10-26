@@ -48,7 +48,8 @@ Aplikácia bude obsahovať používateľskú a administrátorskú časť. Regist
 ## Plánované entity
 
 - **Používateľ** – uchováva údaje potrebné na prihlásenie a identifikáciu používateľa. Atribúty: ID, meno, e-mail, heslo a rola.
-- **Kniha** – obsahuje údaje o zdieľanej knihe. Atribúty: ID, názov, ISBN, rok vydania, popis, obrázok a vlastník.
+- **Žáner** – kategória knihy. Atribúty: ID, názov.
+- **Kniha** – obsahuje údaje o zdieľanej knihe. Atribúty: ID, názov, ISBN, rok vydania, popis, obrázok, vlastník a žáner.
 - **Autor** – obsahuje údaje o autoroch kníh. Atribúty: ID, meno a priezvisko.
 - **Výpožička** – eviduje požiadanie a vypožičanie knihy. Atribúty: ID, používateľ, kniha, dátum vytvorenia, dátum vypožičania, dátum vrátenia a stav.
 - **book_authors** – asociatívna tabuľka prepájajúca knihy a autorov pri vzťahu M:N.
@@ -56,6 +57,7 @@ Aplikácia bude obsahovať používateľskú a administrátorskú časť. Regist
 ## Vzťahy medzi entitami
 
 - **Používateľ – Kniha:** 1:N, jeden používateľ môže vlastniť viacero kníh.
+- **Žáner – Kniha:** 1:N, jeden žáner môže byť priradený viacerým knihám.
 - **Používateľ – Výpožička:** 1:N, jeden používateľ môže mať viacero výpožičiek.
 - **Kniha – Výpožička:** 1:N, jedna kniha môže byť evidovaná vo viacerých výpožičkách v priebehu času.
 - **Kniha – Autor:** M:N, jedna kniha môže mať viacerých autorov a jeden autor môže byť priradený k viacerým knihám. Vzťah bude realizovaný pomocou tabuľky `book_authors`.

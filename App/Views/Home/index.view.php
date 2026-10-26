@@ -1,39 +1,41 @@
 <?php
-
 /** @var \Framework\Support\LinkGenerator $link */
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col mt-5">
-            <div class="text-center">
-                <h2>Vaííčko MVC FW</h2>
-                <h3>Version <?= App\Configuration::FW_VERSION ?></h3>
-                <img src="<?= $link->asset('images/vaiicko_logo.png') ?>" alt="Framework Logo">
-                <p>
-                    Congratulations, you have successfully installed and run the framework
-                    <strong>Vaííčko</strong> <?= App\Configuration::FW_VERSION ?>!<br>
-                    We hope that you will create a great application using this framework.<br>
-                </p>
-                <p>
-                    This simple framework was created for teaching purposes and to better understand how the MVC
-                    architecture works.<br>
-                    It is intended for students of the subject <em>web application development</em>, but not only
-                    for them.
-                </p>
-            </div>
-        </div>
+<div class="page-heading">
+    <div class="container">
+        <h1>Vítajte v BookShare</h1>
+        <p>Komunitná knižnica – zdieľajte knihy so susedmi a priateľmi</p>
     </div>
-    <div class="row mt-3">
-        <div class="col text-center">
-            <h4>Authors</h4>
-            <div>
-                <a href="mailto:Patrik.Hrkut@fri.uniza.sk">doc. Ing. Patrik Hrkút, PhD.</a><br>
-                <a href="mailto:Michal.Duracik@fri.uniza.sk">Ing. Michal Ďuračík, PhD.</a><br>
-                <a href="mailto:Matej.Mesko@fri.uniza.sk">Ing. Matej Meško, PhD.</a><br><br>
-                &copy; 2020-<?= date('Y') ?> University of Žilina, Faculty of Management Science and Informatics,
-                Department of Software Technologies
-            </div>
+</div>
+
+<div class="filter-bar">
+    <div class="container">
+        <div class="filter-bar-inner">
+            <input type="search" placeholder="Hľadaj knihu podľa názvu alebo autora…">
+            <select>
+                <option value="">Žáner</option>
+                <option>Informatika</option>
+                <option>Beletria</option>
+                <option>Sci-fi a fantasy</option>
+                <option>Ekonómia</option>
+                <option>Matematika</option>
+            </select>
+            <select>
+                <option value="">Dostupnosť</option>
+                <option>Dostupná</option>
+                <option>Požičaná</option>
+            </select>
+            <button class="btn btn-primary">Filtrovať</button>
+            <button class="btn btn-ghost">Reset</button>
         </div>
     </div>
 </div>
+
+<main class="page-body">
+    <div class="container">
+        <div class="placeholder-block">
+            <p>Placeholder obsahu vybranej stránky</p>
+        </div>
+    </div>
+</main>
