@@ -4,38 +4,55 @@
 
 <div class="page-heading">
     <div class="container">
-        <h1>Vítajte v BookShare</h1>
+        <h1>Vitajte v BookShare</h1>
         <p>Komunitná knižnica – zdieľajte knihy so susedmi a priateľmi</p>
-    </div>
-</div>
-
-<div class="filter-bar">
-    <div class="container">
-        <div class="filter-bar-inner">
-            <input type="search" placeholder="Hľadaj knihu podľa názvu alebo autora…">
-            <select>
-                <option value="">Žáner</option>
-                <option>Informatika</option>
-                <option>Beletria</option>
-                <option>Sci-fi a fantasy</option>
-                <option>Ekonómia</option>
-                <option>Matematika</option>
-            </select>
-            <select>
-                <option value="">Dostupnosť</option>
-                <option>Dostupná</option>
-                <option>Požičaná</option>
-            </select>
-            <button class="btn btn-primary">Filtrovať</button>
-            <button class="btn btn-ghost">Reset</button>
-        </div>
     </div>
 </div>
 
 <main class="page-body">
     <div class="container">
-        <div class="placeholder-block">
-            <p>Placeholder obsahu vybranej stránky</p>
-        </div>
+
+        <section class="hero">
+            <h2>Každá kniha si zaslúži ďalšieho čitateľa</h2>
+            <p>
+                BookShare prepája ľudí, ktorí majú doma knihy, s tými, ktorí si ich chcú požičať.
+                Zaregistrujte svoju knižnicu, požičiavajte ostatným a objavujte tituly vo svojom okolí.
+            </p>
+            <div class="hero-actions">
+                <a href="<?= $link->url('books.index') ?>" class="btn btn-primary">Prehliadať knihy</a>
+                <a href="<?= $link->url('authors.index') ?>" class="btn btn-ghost">Zoznam autorov</a>
+            </div>
+        </section>
+
+        <section>
+            <p class="section-label">Ako to funguje</p>
+            <div class="steps-grid">
+                <article class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Pridajte svoje knihy</h3>
+                    <p>
+                        Zaevidujte knihy, ktoré ste ochotní požičať. Doplňte názov, autora, žáner
+                        a krátky popis stavu výtlačku.
+                    </p>
+                </article>
+                <article class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Nájdite, čo hľadáte</h3>
+                    <p>
+                        Prehľadávajte zoznam kníh podľa názvu, autora alebo ISBN a filtrujte
+                        podľa žánru a dostupnosti.
+                    </p>
+                </article>
+                <article class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Požiadajte o výpožičku</h3>
+                    <p>
+                        Pošlite žiadosť majiteľovi knihy. Po schválení si knihu prevezmete
+                        a po prečítaní vrátite späť.
+                    </p>
+                </article>
+            </div>
+        </section>
+
     </div>
 </main>

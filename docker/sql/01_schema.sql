@@ -17,9 +17,10 @@ CREATE TABLE genres (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_slovak_ci;
 
 CREATE TABLE authors (
-    id         INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name  VARCHAR(100) NOT NULL,
+    id          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name  VARCHAR(100) NOT NULL,
+    last_name   VARCHAR(100) NOT NULL,
+    nationality VARCHAR(100) NULL,
     CONSTRAINT uq_authors_name UNIQUE (first_name, last_name)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_slovak_ci;
 

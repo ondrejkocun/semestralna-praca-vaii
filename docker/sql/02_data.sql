@@ -13,16 +13,16 @@ INSERT INTO genres (id, name) VALUES
     (4, 'Sci-fi a fantasy'),
     (5, 'Ekonómia');
 
-INSERT INTO authors (id, first_name, last_name) VALUES
-    (1, 'Robert C.', 'Martin'),
-    (2, 'Erich', 'Gamma'),
-    (3, 'Richard', 'Helm'),
-    (4, 'Ralph', 'Johnson'),
-    (5, 'John', 'Vlissides'),
-    (6, 'George', 'Orwell'),
-    (7, 'J. R. R.', 'Tolkien'),
-    (8, 'Thomas H.', 'Cormen'),
-    (9, 'Daniel', 'Kahneman');
+INSERT INTO authors (id, first_name, last_name, nationality) VALUES
+    (1, 'Robert C.', 'Martin', 'Americká'),
+    (2, 'Erich', 'Gamma', 'Švajčiarska'),
+    (3, 'Richard', 'Helm', 'Americká'),
+    (4, 'Ralph', 'Johnson', 'Americká'),
+    (5, 'John', 'Vlissides', 'Americká'),
+    (6, 'George', 'Orwell', 'Britská'),
+    (7, 'J. R. R.', 'Tolkien', 'Britská'),
+    (8, 'Thomas H.', 'Cormen', 'Americká'),
+    (9, 'Daniel', 'Kahneman', 'Izraelsko-americká');
 
 INSERT INTO books (id, owner_id, genre_id, title, isbn, year, description) VALUES
     (1, 2, 1, 'Čistý kód', '978-80-251-2285-3', 2009, 'Príručka agilného softvérového remesla. Mierne opotrebovaná väzba.'),

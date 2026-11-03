@@ -37,7 +37,8 @@ $currentAction     = strtolower($_GET['a'] ?? 'index');
                            class="nav-link <?= $currentController === 'books' ? 'active' : '' ?>">Knihy</a></li>
                     <li><a href="#" class="nav-link">Moje knihy</a></li>
                     <li><a href="#" class="nav-link">V&#253;po&#382;i&#269;ky</a></li>
-                    <li><a href="#" class="nav-link">Autori</a></li>
+                    <li><a href="<?= $link->url('authors.index') ?>"
+                           class="nav-link <?= $currentController === 'authors' ? 'active' : '' ?>">Autori</a></li>
                     <li><a href="<?= $link->url('home.contact') ?>"
                            class="nav-link <?= $currentController === 'home' && $currentAction === 'contact' ? 'active' : '' ?>">Kontakt</a></li>
                 </ul>
@@ -74,7 +75,7 @@ $currentAction     = strtolower($_GET['a'] ?? 'index');
                 <ul class="footer-links">
                     <li><a href="<?= $link->url('home.index') ?>">Domov</a></li>
                     <li><a href="<?= $link->url('books.index') ?>">Zoznam kn&#237;h</a></li>
-                    <li><a href="#">Autori</a></li>
+                    <li><a href="<?= $link->url('authors.index') ?>">Autori</a></li>
                     <li><a href="<?= $link->url('home.contact') ?>">Kontakt</a></li>
                 </ul>
             </div>
