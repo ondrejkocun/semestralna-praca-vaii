@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Author;
+use App\Models\Book;
 use Framework\Core\BaseController;
 use Framework\Http\HttpException;
 use Framework\Http\Request;
@@ -19,6 +20,7 @@ class AuthorsController extends BaseController
     {
         return $this->html([
             'authors' => Author::getAll(orderBy: '`last_name`, `first_name`'),
+            'bookCounts' => Book::getBookCountByAuthor(),
         ]);
     }
 

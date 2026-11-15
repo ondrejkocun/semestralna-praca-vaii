@@ -1,5 +1,6 @@
 <?php
 /** @var \App\Models\Author[] $authors */
+/** @var array<int, int> $bookCounts */
 /** @var \Framework\Support\LinkGenerator $link */
 ?>
 
@@ -28,6 +29,7 @@
                     <th>Meno</th>
                     <th>Priezvisko</th>
                     <th>Národnosť</th>
+                    <th>Knihy</th>
                     <th class="col-actions">Akcie</th>
                 </tr>
                 </thead>
@@ -39,6 +41,7 @@
                         <td data-label="Národnosť"><?= $author->nationality !== null
                                 ? htmlspecialchars($author->nationality)
                                 : '<span class="text-muted">neuvedená</span>' ?></td>
+                        <td data-label="Knihy"><?= (int)($bookCounts[$author->id] ?? 0) ?></td>
                         <td class="col-actions" data-label="Akcie">
                             <div class="table-actions">
                                 <a href="<?= $link->url('authors.edit', ['id' => $author->id]) ?>"
